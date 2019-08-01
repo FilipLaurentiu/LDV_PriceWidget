@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <script src="./index.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="LDV_Bank_Widget" class="bg-dark-blue">
+        <div id="logo_container">
+            <img src="./assets/ldv-crypto-exchange-logo-40.png" alt="no logo to display">
+        </div>
+        <p id="last_update_time"></p>
+        <div id="current_prices">
+            <div id="btc_prices">
+                <span class="bolder">BTC price</span>
+                <div>
+                    <p>Buy: <span id="BTC_buy_price">---</span></p>
+                    <p>Sell: <span id="BTC_sell_price">---</span></p>
+                </div>
+
+            </div>
+            <div id="eth_prices">
+                <span class="bolder">ETH price</span>
+                <div>
+                    <p>Buy: <span id="ETH_buy_price">---</span></p>
+                    <p>Sell: <span id="ETH_sell_price">---</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="margin-medium-top-bottom">
+            <label for="fiat_currency">From: </label>
+            <select onchange="fiatCurrencyChange(this.value)" name="fiat_currency" id="fiat_currency">
+            </select>
+
+            <label for="crypto_currency">In: </label>
+            <select onchange="cryptoCurrencyChange(this.value)" name="crypto_currency" id="crypto_currency">
+            </select>
+        </div>
+        <div>
+            <div class="margin-medium-top-bottom align-right">
+                <label for="amount_field">Amount: </label>
+                <input type="number" name="amount_field" id="amount_field" onkeypress="allowOnlyNumber(event)"
+                    onkeyup="calculateCryptoResult(this.value)" placeholder="Enter your amount here">
+                <span id="amount_fiat_label">EUR</span>
+            </div>
+            <div class="margin-medium-top-bottom align-right">
+                <label for="result_field">Result: </label>
+                <input type="number" name="result_field" id="result_field" placeholder="Result" disabled>
+                <span id="amount_crypto_label">BTC</span>
+            </div>
+        </div>
+        <div id="buy_button_container">
+            <a onclick="navigateToBuy()">
+                <button id="buy_button">BUY</button>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

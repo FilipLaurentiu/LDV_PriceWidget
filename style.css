@@ -1,0 +1,65 @@
+#LDV_Bank_Widget {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#logo_container {   
+    padding:10px;
+}
+
+#currenct_prices {
+    width: 100%;
+    display: table;
+}
+#btc_prices, #eth_prices {
+    float: left;
+    width: 50%;
+}
+
+.bg-dark-blue {
+    background-color: #0b1c5d;
+}
+
+body {
+    color: white;
+    font: 400 16px/28px Arial,sans-serif;
+}
+
+.margin-medium-top-bottom {
+    margin: 10px 0;
+}
+
+.align-right { 
+    text-align: right;
+}
+
+#buy_button {
+    background-color: #1c85c7;
+    color: #fff !important;
+    padding: 15px 35px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1em;
+    border-radius: 0;
+    outline: none !important;
+    text-align: center;
+    cursor: pointer;
+    transition: all 300ms linear 0s;
+    user-select: none;
+    border: 1px solid transparent;
+    box-shadow: none;
+}
+
+#buy_button:hover {
+    background-color: #0b1c5d;
+}
+
+#buy_button_container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.bolder {
+    font-weight: bolder;
+}
